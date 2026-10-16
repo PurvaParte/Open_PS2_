@@ -1,0 +1,28 @@
+
+[
+  {
+    "question_id": "Q1",
+    "concept_id": "C1",
+    "prompt": "Write a function that returns the square of a number."
+  },
+  {
+    "question_id": "Q2",
+    "concept_id": "C2",
+    "prompt": "Create a class with an attribute and a method."
+  },
+  {
+    "question_id": "Q3",
+    "concept_id": "C3",
+    "prompt": "Explain how encapsulation protects an object's data."
+  },
+  {
+    "question_id": "Q4",
+    "concept_id": "C4",
+    "prompt": "Create a child class that inherits from a parent class."
+  },
+  {
+    "question_id": "Q5",
+    "concept_id": "C5",
+    "prompt": "Explain how dependency injection reduces coupling."
+  }
+]
