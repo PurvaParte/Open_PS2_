@@ -1,0 +1,291 @@
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #20213a;
+  background: #f5f6fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, a {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 245px;
+  padding: 30px 18px;
+  background: #19182e;
+  color: white;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  color: #c6b8ff;
+  margin: 0 0 40px;
+}
+
+.sidebar-label, .muted {
+  color: #85869f;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #c8c8d9;
+  padding: 13px;
+  margin: 6px 0;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #373254;
+  color: white;
+}
+
+.sidebar-label {
+  margin-top: 25px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.topbar h1 {
+  margin: 8px 0;
+  font-size: clamp(23px, 3vw, 32px);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #7254df;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.welcome {
+  background: linear-gradient(115deg, #32275c, #7354cf);
+  color: white;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 22px;
+}
+
+.welcome > p:first-child {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #d8ccff;
+}
+
+.welcome h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  margin: 15px 0;
+  color: white;
+}
+
+.welcome p:last-child {
+  color: #e4dfff;
+  line-height: 1.6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e9e9f2;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 5px 18px #24204a08;
+}
+
+.stats .card > p {
+  color: #77788e;
+  font-size: 14px;
+}
+
+.stats h2 {
+  font-size: 29px;
+  margin: 14px 0;
+}
+
+.stats span {
+  font-size: 12px;
+  color: #77788e;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  gap: 22px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.concept {
+  margin-top: 25px;
+}
+
+.concept-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.concept-heading strong {
+  color: #6750cb;
+}
+
+.progress {
+  height: 8px;
+  background: #eeeef7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #795ce4;
+}
+
+.progress-fill.weak {
+  background: #ec965e;
+}
+
+.recommendation {
+  background: #fff;
+}
+
+.target {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eee8ff;
+  color: #7254df;
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.recommendation h2 {
+  line-height: 1.35;
+}
+
+.recommendation > p:not(.muted) {
+  color: #77788e;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.reason {
+  background: #f7f5ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.reason p {
+  color: #77788e;
+  line-height: 1.6;
+}
+
+.recommendation button {
+  width: 100%;
+  background: #6c4bd3;
+  color: white;
+  padding: 14px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.recommendation button:hover {
+  background: #5436b7;
+}
+
+footer {
+  margin-top: 28px;
+  color: #89899c;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 190px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 8px;
+  }
+
+  .sidebar h2 {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar a {
+    padding: 10px 5px;
+    font-size: 11px;
+  }
+
+  .main {
+    padding: 14px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
