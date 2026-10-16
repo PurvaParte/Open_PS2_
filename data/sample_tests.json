@@ -1,0 +1,46 @@
+{
+  "test_funcs_01": {
+    "concept_id": "variables_functions",
+    "language": "python",
+    "function_name": "calculate_discount",
+    "description": "Write a function calculate_discount(price, rate) that returns the final price after applying a discount rate (0.0 to 1.0).",
+    "test_cases": [
+      {"input": [100, 0.2], "expected": 80.0},
+      {"input": [50, 0.0], "expected": 50.0},
+      {"input": [200, 0.5], "expected": 100.0}
+    ],
+    "reference_keywords": ["def calculate_discount", "return"]
+  },
+  "test_classes_01": {
+    "concept_id": "classes_objects",
+    "language": "python",
+    "function_name": "BankAccount",
+    "description": "Create a BankAccount class initialized with balance, and a deposit(amount) method that adds to and returns the new balance.",
+    "test_cases": [
+      {"input": [100, 50], "expected": 150},
+      {"input": [0, 25], "expected": 25}
+    ],
+    "reference_keywords": ["class BankAccount", "def __init__", "def deposit"]
+  },
+  "test_inheritance_01": {
+    "concept_id": "inheritance",
+    "language": "python",
+    "function_name": "SavingsAccount",
+    "description": "Create a SavingsAccount(BankAccount) subclass with an apply_interest(rate) method.",
+    "test_cases": [
+      {"input": [100, 0.05], "expected": 105.0},
+      {"input": [200, 0.10], "expected": 220.0}
+    ],
+    "reference_keywords": ["class SavingsAccount", "BankAccount", "def apply_interest"]
+  },
+  "test_di_01": {
+    "concept_id": "dependency_injection",
+    "language": "python",
+    "function_name": "NotificationService",
+    "description": "Create a NotificationService class that accepts a sender object via __init__ and calls sender.send(msg) inside notify(msg).",
+    "test_cases": [
+      {"input": ["Hello"], "expected": "sent:Hello"}
+    ],
+    "reference_keywords": ["class NotificationService", "def __init__", "def notify", ".send("]
+  }
+}
